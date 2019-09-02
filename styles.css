@@ -7,13 +7,16 @@ body{
   margin: 10px;
   font-family: 'Roboto Mono', monospace;
   font-size: 50px;
+  padding: 20px;
 }
 
 #hero-img{
-  width: 50%;
+  width: 45%;
   border-radius: 30%;
   float: left;
   margin: 10px;
+  margin-right: 20px;
+
 }
 
 #welcome{
@@ -24,6 +27,14 @@ body{
   font-size: 30px;
 }
 
-#welcome p{
+#welcome p, #welcome li{
   font-size: 25px;
+}
+
+.course:nth-child(2n){
+  background-color: #ffd992;
+}
+
+.course:nth-child(2n+1){
+  background-color: #90e6f5;
 }

@@ -2,48 +2,312 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Sean Gatewood</title>
+    <title></title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="resume_styles.css">
+    <link rel="stylesheet" href="navbar_styles.css">
     <script type="text/javascript" src="jquery.js"></script>
 
-    <link rel="stylesheet" href="navbar_styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Peta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resume.css">
 
   </head>
   <body>
 
     <div class="navbar">
-      <a href="index.html">Home</a>
+      <a class="" href="index.html">Home</a>
       <a class="active" href="resume.html">Resume</a>
-      <a href="#null">About me</a>
-      <a href="#null">Resources</a>
-      <a href="#null">Contact</a>
+      <!-- <a href="resume.html">Projects</a> -->
+      <a class="disabled" href="#null">About me</a>
+      <a class="disabled" href="#null">Resources</a>
+      <a class="disabled" href="#null">Contact</a>
     </div>
 
-    <p>Download formated PDF.</p>
 
-    <div class="resume-node">
-      <h1>Education</h1>
-      <ul>
-        <li><strong>University of Virginia</strong> (Charlottesville, VA)</li>
-        <li>B.S. Computer Science (May 2020)</li>
-        <li>GPA: 3.953</li>
-        <li>Rodman Scholar</li>
-        <li>Raven Society</li>
-      </ul>
-    </div>
+    <h1 id="resume">Resume</h1>
 
-    <div class="resume-node">
-      <h1>Software Engineering Intern</h1>
-      <ul>
-        <li>Uber Advanced Technologies Group (Pittsburgh, PA) </li>
-        <li>Developed implementations for a low-level key-value store using various database technologies (e.g. LevelDB, Sqlite3)</li>
-        
-      </ul>
-    </div>
+    <p class="p-welcome"><a href="media/Sean_Gatewood.pdf">Click here</a> for a professional copy.</p>
+    <p class="p-welcome">Or, scroll down for a much more fun copy.</p>
 
+    <table cellspacing="0" cellpadding="0" class="first-in-group" id="uva">
+      <tr>
+        <td colspan="2" class="td-title">Education</td>
+      </tr>
+      <tr>
+        <td class="td-img">
+          <img src="media/rotunda_w_clouds.jpg" alt="UVA Lawn">
+        </td>
+        <td class="td-text">
+          <h1>>> University of Virginia</h1>
+          <ul class="larger-font">
+            <li>Charlottesville, VA</li>
+            <li>B.S. Computer Science (May 2020)</li>
+            <li>GPA: 3.953</li>
+            <li>Rodman Scholar</li>
+            <li>Raven Society</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="0" class="first-in-group" id="uber">
+      <tr>
+        <td colspan="2" class="td-title">Internships / Work Experience</td>
+      </tr>
+      <tr>
+        <td class="td-text">
+          <h1>>> Uber Advanced Technologies Group</h1>
+          <ul>
+            <li class="icon-bullet larger-font"><img src="media/calendar.png" alt=""/><span>Summer 2019</span></li>
+            <li class="icon-bullet larger-font"><img src="media/map.png" alt=""><span>Pittsburgh, PA</span></li>
+            <hr>
+            <li>Developed and optimized implementations for a low-level key-value store using various database technologies (e.g. LevelDB, Sqlite3, LMDB, File System)</li>
+            <li>Performed an experiment using Google Benchmark to measure the relative performances of implementations.</li>
+            <li>Performed a second experiment to measure the relative data access latency spent on pure database access.</li>
+            <li>Gained experience with real-world workflows and development systems.</li>
+            <li>Presented results to Uber ATG software engineers.</li>
+          </ul>
+        </td>
+        <td class="td-img">
+          <img src="media/car_and_me.jpg" alt="Uber ATG">
+        </td>
+      </tr>
+    </table>
+    <table cellspacing="0" cellpadding="0" id="nasa">
+      <tr>
+        <td class="td-img">
+          <img src="media/plane2.jpg" alt="Langley Hangar">
+        </td>
+        <td class="td-text">
+          <h1>>> NASA / SSAI</h1>
+          <ul>
+            <li class="icon-bullet larger-font"><img src="media/calendar.png" alt=""/><span>Summer 2018 - Summer 2019</span></li>
+            <li class="icon-bullet larger-font"><img src="media/map.png" alt=""><span>Hampton, VA</span></li>
+            <hr>
+            <li>Internship: "Data Management for Airborne Atmospheric Composition Data" </li>
+            <li>Added HDF file compatibility to NASA’s <a href="https://www-air.larc.nasa.gov/missions/TOLNet/tools.html">TOLNet File Format Scanner and Curtain/Profiles Plotter</a>.</li>
+            <li>Engineered a full-stack <a href="https://www-air.larc.nasa.gov/cgi-bin/Driver.cgi?platform=KORUSAQ/DC8_AIRCRAFT">web application</a> for atmospheric researchers to
+                create customized data merges.
+            </li>
+            <ul>
+              <li>Technologies used: JQuery, AJAX, C++, CGI</li>
+            </ul>
+            <li>Presented a working prototype to atmospheric researchers and received design feedback.</li>
+            <li>Continued as a "Casual Employee" of <a href="https://www.ssaihq.com/">Science Systems and Applications, Inc (SSAI)</a> to continue work on the tool during the school year.</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="0" id="ta">
+      <tr>
+        <td class="td-text">
+          <h1>>> UVA Deptartment of Computer Science</h1>
+          <ul>
+            <li class="icon-bullet larger-font"><img src="media/calendar.png" alt=""/><span>Fall 2017 - Present (5 semesters)</span></li>
+            <li class="icon-bullet larger-font"><img src="media/map.png" alt=""><span>Charlottesville, VA</span></li>
+            <hr>
+            <li>TA for CS 1110: Introduction to Programming.</li>
+            <li>Assist hundreds of students with introductory programming concepts in Python.</li>
+            <li>Work one-on-one with students in labs and office hours.</li>
+            <li>Create review videos and study materials for the students.</li>
+            <li>Grade assignments and exams.</li>
+            <li>Currently help manage the course as one of four “Head TAs”.</li>
+          </ul>
+        </td>
+        <td class="td-img">
+          <a href="https://youtu.be/olLi92B85do"><img src="media/video_scene.png" alt="CS 1110 Review Video"></a>
+        </td>
+      </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="0" class="first-in-group" id="skills">
+      <tr>
+        <td colspan="2" class="td-title">Skills</td>
+      </tr>
+      <tr>
+        <td class="td-text">
+          <h1>>> Programming Languages</h1>
+          <h3>(In order of proficiency)</h3>
+          <ul class="larger-font">
+            <!-- <li class="icon-bullet larger-font"><img src="media/bullet-python.png" alt=""/><span>Test</span></li> -->
+            <!-- <li class="icon-bullet larger-font"><img src="media/bullet-python.png" alt=""/><span>Python</span></li> -->
+            <li>Python</li>
+            <li>C++ / C</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>x86 Assembly</li>
+            <li>PHP</li>
+          </ul>
+        </td>
+        <td class="td-text">
+          <h1>>> Other technologies</h1>
+          <ul class="larger-font">
+            <!-- <li class="icon-bullet larger-font"><img src="media/bullet-html.png" alt=""/><span>HTML</span></li> -->
+            <table>
+              <tr>
+                <td>HTML</td>
+                <td>CSS</td>
+                <td>Markdown</td>
+              </tr>
+              <tr>
+                <td>JQuery</td>
+                <td>AJAX</td>
+                <td>Django</td>
+              </tr>
+              <tr>
+                <td>Cgicc</td>
+                <td>NodeJS</td>
+                <td>WebGL</td>
+              </tr>
+              <tr>
+                <td>Mac</td>
+                <td>Windows</td>
+                <td>Linux</td>
+              </tr>
+              <tr>
+                <td>Vim</td>
+                <td>Swift/Xcode</td>
+                <td>Visual Studio</td>
+              </tr>
+              <tr>
+                <td>VS Code</td>
+                <td>Pycharm</td>
+                <td>Git/GitHub</td>
+              </tr>
+              <tr>
+                <td>LaTeX</td>
+                <td>JUnit Testing</td>
+                <td>Google Benchmark</td>
+              </tr>
+              <tr>
+                <td>Atom</td>
+                <td>LabVIEW</td>
+                <td>SQL/SQLite3</td>
+              </tr>
+              <tr>
+                <td>Bash Scripting</td>
+                <td>Chrome Extensions</td>
+                <td>Autodesk Inventor</td>
+              </tr>
+            </table>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="0" class="first-in-group course" id="3240">
+      <tr>
+        <td colspan="2" class="td-title">Notable Courses</td>
+      </tr>
+      <tr>
+        <td class="td-text">
+          <h1>>> Advanced Software Development (Spring 2019)</h1>
+          <ul>
+            <li>Learned essential concepts of Software Engineering</li>
+            <ul>
+              <li>Software development processes</li>
+              <li>Requirements engineering</li>
+              <li>Verification and Validation</li>
+              <li>Design Patterns</li>
+              <li>...</li>
+            </ul>
+            <li>Worked with a team on a semester-long development project
+            <ul>
+              <li>"Yelp for Off-Grounds Housing"</li>
+              <li>Django, Bootstrap, JQuery, Travis CI</li>
+              <li>Closely followed SCRUM framework.</li>
+              <li>Gained experience collaborating over GitHub.</li>
+            </ul>
+          </ul>
+        </td>
+        <td class="td-img">
+          <a href="http://segfaulters3240.herokuapp.com"><img src="media/3240_project.png" alt="3240 project"></a>
+        </td>
+      </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="0" class="course" id="algo">
+      <tr>
+        <td class="td-img">
+          <img src="media/algo.png" alt="3240 project">
+        </td>
+        <td class="td-text">
+          <h1>>> Algorithms (Fall 2018)</h1>
+          <ul>
+            <li>Broad course topics:</li>
+            <ul>
+              <li>Divide and Conquer</li>
+              <li>Sorting</li>
+              <li>Dynamic Programming</li>
+              <li>Greedy Algorithms</li>
+              <li>Graph Algorithms</li>
+              <li>Reductions, NP Completeness</li>
+            </ul>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="0" class="course" id="graphics">
+      <tr>
+        <td class="td-text">
+          <h1>>> Computer Graphics (Fall 2018)</h1>
+          <ul>
+            <li>6 Projects:</li>
+            <ul>
+              <li>2D Rasterizer</li>
+              <li>3D Rasterizer</li>
+              <li>Raytracer</li>
+              <li>WebGL (displayed right)</li>
+              <li>Image manipulation</li>
+            </ul>
+          </ul>
+        </td>
+        <td class="td-img">
+        	<!-- Removed because it's a homework answer -->
+          <!-- <embed width="400px" height="200px" src="hw4.html"> -->
+        </td>
+      </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="0" class="course" id="ics">
+      <tr>
+        <td class="td-img">
+          <img src="media/ics.png" alt="">
+        </td>
+        <td class="td-text">
+          <h1>>> Introduction to Cybersecurity (Fall 2018)</h1>
+          <ul>
+            <li>Learned a wide variety of cybersecurity concepts</li>
+            <li>Notable assignments:</li>
+            <ul>
+              <li>RSA</li>
+              <li>Buffer Overflow: Sucessfully smashed the stack to select my assignment grade.</li>
+              <li>SQL injection, XSS, CSRF</li>
+              <li>Cryptocurrency (Sadly, SeanBucks did not take off...)</li>
+            </ul>
+          </ul>
+        </td>
+
+      </tr>
+    </table>
+
+
+
+    <!-- <h1>>> Operating Systems (Fall 2019)</h1>
+    <ul>
+      <li>Learning about basic OS concepts.</li>
+      <li>Added a system call to a rudimentary OS.</li>
+    </ul>
+    <h1>>> Machine Learning (Fall 2019)</h1>
+    <h1>>> Computer Vision (Fall 2019)</h1>
+    <h1>>> Databases (Fall 2019)</h1>
+    <h1>>> Advanced Software Development Methods (Spring 2019)</h1>
+    <ul>
+      <li>Learned about </li>
+    </ul>
+    <h1>>> Databases (Fall 2019)</h1> -->
 
   </body>
 </html>

@@ -29,6 +29,11 @@
   color: white;
 }
 
-.navbar a.active:hover{
-  background-color: #6098b3;
+.navbar a.disabled {
+  color: #828282;
+  cursor: not-allowed;
+}
+
+.navbar a.disabled:hover{
+  background-color: inherit;
 }

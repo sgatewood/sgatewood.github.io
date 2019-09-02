@@ -1,0 +1,116 @@
+/* table, .td-title, .td-img, .td-text{
+  border: 2px solid black;
+} */
+
+table{
+  width: 90%;
+  margin-left: 5%;
+  font-family: 'Roboto Mono', monospace;
+  /* border: 1px solid black; */
+}
+
+td{
+  /* border: 1px solid black; */
+  overflow: hidden;
+}
+
+.td-title{
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: navy;
+  color: white;
+  padding: 0.5% 0 0.5% 0;
+}
+
+.td-img{
+  width: 45%;
+  overflow: hidden;
+}
+
+.td-img img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+.td-text{
+  padding: 0.5% 1% 0 1.5%;
+  vertical-align: top;
+}
+
+.first-in-group{
+  margin-top: 5%;
+}
+
+.icon-bullet {
+  list-style-type: none;
+  margin-left: -5%;
+}
+
+.icon-bullet img{
+  width: 30px;
+}
+
+.icon-bullet span{
+  position: relative;
+  top: -5px;
+  margin-left: 1%;
+}
+
+#uva tr:nth-child(2){
+  background-image: grey;
+  background-image: linear-gradient(to right, orange , #ffd483);
+}
+
+#uber tr{
+  background: #a8ff78;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#nasa tr{
+  background: #7F7FD5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #cfcfff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #cfcfff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#ta tr{
+  background: #bdc3c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #6b859e, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #6b859e, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#skills tr{
+  background-color: #bbffdd;
+}
+
+#courses tr{
+  background-color: #d0d0d0;
+}
+
+.p-welcome{
+  text-align: center;
+  font-size: 25px;
+}
+
+#resume{
+  text-align: center;
+  font-size: 40px;
+}
+
+.larger-font{
+  font-size: 20px;
+  /* text-align: center; */
+}
+
+
+#algo img, #graphics img{
+  width: 50%;
+  margin-left: 25%;
+}
+
+#skills table td{
+  border-left: 1px solid black;
+  padding-left: 10px;
+}
