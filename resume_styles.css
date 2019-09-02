@@ -1,0 +1,25 @@
+.resume-node{
+  border: 1px solid black;
+  border-radius: 5%;
+  width: 50%;
+  /* float: left; */
+  margin-top: 10px;
+  margin-left: 10px;
+  overflow: hidden;
+  font-size: 20px;
+  background-color: #bef5ec;
+}
+
+.resume-node h1{
+  font-size: 30px;
+  text-align: center;
+  background-color: #40798C;
+  color: #f7ff96;
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+
+.resume-node ul{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

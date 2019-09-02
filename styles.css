@@ -1,0 +1,29 @@
+body{
+  background-color: #F7FFF7;
+  margin: 0px;
+}
+
+#sean-gatewood{
+  margin: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 50px;
+}
+
+#hero-img{
+  width: 50%;
+  border-radius: 30%;
+  float: left;
+  margin: 10px;
+}
+
+#welcome{
+  float: left;
+}
+
+#welcome h2{
+  font-size: 30px;
+}
+
+#welcome p{
+  font-size: 25px;
+}
