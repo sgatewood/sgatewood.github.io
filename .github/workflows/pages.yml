@@ -45,10 +45,16 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
+      - name: clone resume repo
+        uses: actions/checkout@v2
+        with:
+          repository: sgatewood/resume
+          path: resume
+          ref: main
       - name: Update resume.yaml
-        run: |
-            git clone git@github.com:sgatewood/resume.git
-            cp resume/resume.yaml _data
+        run: cp resume/resume.yaml _data
+
       - name: Upload site artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
