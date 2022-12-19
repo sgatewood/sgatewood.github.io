@@ -47,7 +47,9 @@ jobs:
           path: resume
           ref: main
       - name: Update resume.yaml
-        run: cp resume/resume.yaml _data
+        run: |
+            mv resume/resume.yaml _data
+            rm -rf resume
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
