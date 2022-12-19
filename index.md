@@ -1,6 +1,11 @@
 ---
-title: Resume
+title: Home
 layout: home
+nav_order: 1
 ---
 
-# {{ site.data.resume.name }}
+# Hi 👋
+
+I'm Sean.
+
+Check out out my [resume](./resume) or my [blog](./blog).
