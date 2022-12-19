@@ -40,12 +40,6 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
-
       - name: clone resume repo
         uses: actions/checkout@v2
         with:
@@ -54,15 +48,14 @@ jobs:
           ref: main
       - name: Update resume.yaml
         run: cp resume/resume.yaml _data
-
+      - name: Build with Jekyll
+        # Outputs to the './_site' directory by default
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
       - name: Upload site artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
-      - name: Upload resume artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          name: site data
-          path: _data
 
   # Deployment job
   deploy:
