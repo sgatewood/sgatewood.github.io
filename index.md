@@ -8,6 +8,6 @@ nav_order: 1
 
 I'm Sean.
 
-Check out out my [resume](./resume) or my [blog](./blog).
+![me](/assets/images/me.png)
 
-I just recently (Dec 2022) converted this to a Jekyll site, so pardon the bareness. :-)
+Check out out my [resume](./resume) or my [blog](./blog).
