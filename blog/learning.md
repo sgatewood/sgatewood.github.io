@@ -23,3 +23,5 @@ My professor posted each lecture as a video recording to the class website, and 
 But then I started thinking it'd be better if the videos were broken down into smaller topic videos instead of hour-long monoliths.
 
 I ended up making [this thing](https://github.com/sgatewood/os_vids) that pretends to chop up the videos.
+
+Huh, maybe I can still deploy this thing [here](/os_vids)...
