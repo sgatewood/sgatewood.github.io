@@ -59,7 +59,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: sgatewood/os_vids
-          path: _site
+          path: _site/os_vids
           ref: master
       - name: Upload site artifact
         # Automatically uploads an artifact from the './_site' directory by default
