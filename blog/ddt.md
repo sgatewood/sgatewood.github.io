@@ -191,3 +191,7 @@ Our `**` unpacking is how it knows to say like `a=True`
 As with many generalizations made in the name of DRYness, stop/revert if it gets too complicated. The goal is to make it easier to work with.
 
 If you start adding conditionals in your subtest section, turn in the dumb version and go outside. ☀️
+
+## 2024 Comment
+
+Oops, I had re-invented what Go tests do **all** the time :-)
