@@ -16,3 +16,5 @@ nav_order: 2
 ## [jspaint.app](https://jspaint.app/)
 
 ## [sgatewood.github.io](https://sgatewood.github.io/)
+
+## [snake](https://patorjk.com/games/snake/)
