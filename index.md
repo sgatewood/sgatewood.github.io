@@ -9,5 +9,4 @@ nav_order: 1
 I'm Sean.
 
 ![me](/assets/images/me.png)
-
-Check out out my [resume](./resume) or my [blog](./blog).
+g
