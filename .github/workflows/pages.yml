@@ -62,8 +62,10 @@ jobs:
           path: _site/os_vids
           ref: master
       - name: Upload site artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ./_site
 
   # Deployment job
   deploy:
@@ -75,4 +77,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
