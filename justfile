@@ -1,3 +1,5 @@
+set export := true
+
 # (default recipe -- show available recipes)
 help:
   @just -l
@@ -25,3 +27,7 @@ run-dev:
   just bundle-install
   (sleep 2 && just open) &
   bundle exec jekyll serve --livereload
+
+build baseurl:
+  just bundle-install
+  bundle exec jekyll build --baseurl "${baseurl}"
