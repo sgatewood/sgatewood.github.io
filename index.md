@@ -9,4 +9,3 @@ nav_order: 1
 I'm Sean.
 
 ![me](/assets/images/me.png)
-g
