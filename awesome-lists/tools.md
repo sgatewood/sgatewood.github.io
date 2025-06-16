@@ -1,7 +1,7 @@
 ---
-title: Tools
+title: Awesome Tools
 layout: home
-parent: Awesome Lists
+parent: Awesome Lists 😎
 nav_order: 1
 ---
 

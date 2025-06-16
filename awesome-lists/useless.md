@@ -1,7 +1,7 @@
 ---
 title: Useless websites
 layout: home
-parent: Awesome Lists
+parent: Awesome Lists 😎
 nav_order: 2
 ---
 
