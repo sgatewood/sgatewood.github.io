@@ -8,4 +8,4 @@ nav_order: 1
 
 I'm Sean.
 
-![me](/assets/images/me.png)
+<img style="border-radius: 30px;" src="/assets/images/me.png"/>
