@@ -1,0 +1,36 @@
+<button class="btn js-toggle-dark-mode" aria-label="Switch to light mode">
+  ☼
+</button>
+
+<script>
+  const toggleDarkMode = document.querySelector(".js-toggle-dark-mode");
+
+  const setHtmlThemeAttr = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+  };
+
+  jtd.addEvent(toggleDarkMode, "click", function () {
+    if (jtd.getTheme() === "light") {
+      jtd.setTheme("dark");
+      setHtmlThemeAttr("dark");
+      toggleDarkMode.textContent = "☼";
+      toggleDarkMode.ariaLabel = "Switch to light mode";
+      localStorage.setItem("theme", "dark");
+    } else {
+      jtd.setTheme("light");
+      setHtmlThemeAttr("light");
+      toggleDarkMode.textContent = "☾";
+      toggleDarkMode.ariaLabel = "Switch to dark mode";
+      localStorage.setItem("theme", "light");
+    }
+  });
+
+  window.addEventListener("DOMContentLoaded", function () {
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const storedTheme = localStorage.getItem("theme");
+    const theme = storedTheme === null ? (systemPrefersDark ? "dark" : "light") : storedTheme;
+    jtd.setTheme(theme);
+    setHtmlThemeAttr(theme);
+    toggleDarkMode.textContent = theme === "dark" ? "☼" : "☾";
+  });
+</script>
