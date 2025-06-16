@@ -36,7 +36,8 @@ jobs:
           ref: main
       - name: Update resume.yaml
         run: |
-            mv resume/resume.yaml _data
+            cp resume/resume.yaml _data
+            cp resume/resume.yaml _includes
             rm -rf resume
 
       - name: clone os_vids repo
