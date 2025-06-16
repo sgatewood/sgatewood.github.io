@@ -3,3 +3,6 @@ description: Sean's website using Jekyll
 theme: just-the-docs
 
 url: https://sgatewood.github.io/
+
+mermaid:
+  version: "11.6.0"
