@@ -20,3 +20,16 @@ nav_order: 1
 
 - Functionally define json/yaml structures
 - Shall one day take over the infra world
+
+## [`just`](https://just.systems/man/en/)
+
+- "What we all wanted Makefiles to be"
+- Or "the easiest way to make a simple dev CLI for your repo"
+
+## [Nix Flakes](https://wiki.nixos.org/wiki/Flakes)
+
+- Install all of your repo's tools in a hyper-reproducible nix environment
+
+## [`direnv`](https://direnv.net/)
+
+- Set up dev environments for specific folders
