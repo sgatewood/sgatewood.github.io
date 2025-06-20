@@ -3,7 +3,7 @@ title: Awesome Lists 😎
 layout: home
 has_children: true
 has_toc: true
-nav_order: 4
+nav_order: 5
 ---
 
 # {{ page.title }}
