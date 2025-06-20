@@ -12,7 +12,7 @@ This is the story of a [small open-source contribution](https://github.com/pulum
 ## What we wanted
 
 - My team loves using [direnv](https://direnv.net/) to select between deployment environments using directories. 
-  - `cd deployment/envs/dev` --> magically your `kubectl` is configured for the dev cluster
+  - `cd deployment/clusters/dev` --> magically your `kubectl` is configured for the dev cluster
 - We wanted to use this same approach to select which pulumi stack `pulumi` is pointed to
   - `cd deployment/pulumi/stacks/network` --> `pulumi up` deploys the network stack
 - Otherwise, you have to pass in your stack each time with `-s` (e.g. `pulumi up -s network -r ...`)
