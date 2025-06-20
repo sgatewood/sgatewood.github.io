@@ -31,7 +31,6 @@ This is the story of a [small open-source contribution](https://github.com/pulum
   - I just had to read up on [how to contribute / how to test my changes](https://github.com/pulumi/pulumi/blob/master/CONTRIBUTING.md)
   - And then, of course, overdo it a bit on the PR description to make it super easy to review 😎
   
-
 ## Impact
 
 - Today, if you check <https://www.pulumi.com/docs/iac/cli/environment-variables> you will see that the `PULUMI_STACK` variable is supported 🎉
