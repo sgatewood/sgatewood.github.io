@@ -10,7 +10,7 @@ nav_order: 2
 
 # {{ name }}
 
-{{ contact.email }} |
+<{{contact.email}}> |
 [LinkedIn]({{contact.linkedin.link}}) |
 [GitHub]({{contact.github.link}})
 
