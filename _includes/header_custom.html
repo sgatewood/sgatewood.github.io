@@ -16,13 +16,15 @@
       toggleDarkMode.textContent = "☼";
       toggleDarkMode.ariaLabel = "Switch to light mode";
       localStorage.setItem("theme", "dark");
+      window.reinitializeMermaidWithTheme("dark");
     } else {
       jtd.setTheme("light");
       setHtmlThemeAttr("light");
       toggleDarkMode.textContent = "☾";
       toggleDarkMode.ariaLabel = "Switch to dark mode";
       localStorage.setItem("theme", "light");
-    }
+      window.reinitializeMermaidWithTheme("light");
+    };
   });
 
   window.addEventListener("DOMContentLoaded", function () {
@@ -37,38 +39,56 @@
 
 <script type="module" async>
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.7.0/dist/mermaid.esm.min.mjs';
-    mermaid.run({
-        querySelector: '.mermaid',
-        postRenderCallback: (id) => {
-            document.querySelectorAll(`#${id} [class*="link:"]`).forEach(node => {
-                node.classList.forEach(className => {
-                    if (className.startsWith('link:')) {
-                        const url = className.split(':')[1];
+    window.reinitializeMermaidWithTheme = (theme) => {
+        console.log(`init with theme: ${theme}`);
+        mermaid.initialize({
+            theme: theme,
+            startOnLoad: false
+        });
+        document.querySelectorAll('.mermaid').forEach(el => {
+            const source = el.getAttribute('data-source');
+            el.removeAttribute('data-processed');
 
-                        node.addEventListener('click', () => {
-                            window.open(`${url}`, '_self');
+            if (source) {
+                el.innerHTML = source;
+            };
+            
+            el.setAttribute('data-source', el.innerHTML)
+        });
+        mermaid.run({
+            querySelector: '.mermaid',
+            postRenderCallback: (id) => {
+                document.querySelectorAll(`#${id} [class*="link:"]`).forEach(node => {
+                    node.classList.forEach(className => {
+                        if (className.startsWith('link:')) {
+                            const url = className.split(':')[1];
+
+                            node.addEventListener('click', () => {
+                                window.open(`${url}`, '_self');
+                            });
+                        }
+                    });
+                });
+                document.querySelectorAll(`#${id} [class*="link:"]`).forEach(node => {
+                    node.addEventListener('mouseenter', () => {
+                        node.querySelectorAll('path,circle').forEach(path => {
+                            path.style.fill = '#15ff00';
                         });
-                    }
-                });
-            });
-            document.querySelectorAll(`#${id} [class*="link:"]`).forEach(node => {
-                node.addEventListener('mouseenter', () => {
-                    node.querySelectorAll('path,circle').forEach(path => {
-                        path.style.fill = '#15ff00';
+                        node.querySelectorAll('tspan').forEach(path => {
+                            path.style.fill = 'blue';
+                        });
                     });
-                    node.querySelectorAll('tspan').forEach(path => {
-                        path.style.fill = 'blue';
-                    });
-                });
-                node.addEventListener('mouseleave', () => {
-                    node.querySelectorAll('path,circle').forEach(path => {
-                        path.style.fill = '';
-                    });
-                    node.querySelectorAll('tspan').forEach(path => {
-                        path.style.fill = '';
+                    node.addEventListener('mouseleave', () => {
+                        node.querySelectorAll('path,circle').forEach(path => {
+                            path.style.fill = '';
+                        });
+                        node.querySelectorAll('tspan').forEach(path => {
+                            path.style.fill = '';
+                        });
                     });
                 });
-            });
-        }
-    });
+            }
+        });
+    };
+    window.reinitializeMermaidWithTheme("light");
 </script>
