@@ -4,5 +4,3 @@ theme: just-the-docs
 
 url: https://sgatewood.github.io/
 
-mermaid:
-  version: "9.1.3"
