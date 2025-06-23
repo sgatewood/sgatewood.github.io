@@ -5,3 +5,25 @@
 .main-content-wrap footer {
   text-align: center;
 }
+
+#expander {
+  border: 2px dashed grey;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#expander h3 {
+  margin-top: 0;
+  color: grey;
+}
+
+#expander:hover {
+  background-color: #15ff00;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+#expander h3:hover {
+  color: blue;
+}
