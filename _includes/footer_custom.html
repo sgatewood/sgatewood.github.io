@@ -1,3 +1,4 @@
+<div id="mindmap">
 Click where you wanna go
 
 <pre>
@@ -25,3 +26,21 @@ mindmap
 {% endfor %}
 </div>
 </pre>
+</div>
+
+<div id="expander">
+    <h3>gimme that fun lil site map</h3>
+</div>
+
+<script>
+    if (window.location.pathname === "/") {
+        document.getElementById("expander").style.display = "none";
+    } else {
+        document.getElementById("mindmap").style.display = "none";
+        document.getElementById("expander").addEventListener("click", function () {
+            document.getElementById("expander").style.display = "none";
+            document.getElementById("mindmap").style.display = "";
+            window.reinitializeMermaidWithTheme(jtd.getTheme())
+        });
+    }
+</script>
