@@ -35,9 +35,22 @@
   });
 </script>
 
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-</script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
+<script type="module" async>
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.7.0/dist/mermaid.esm.min.mjs';
+    mermaid.run({
+        querySelector: '.mermaid',
+        postRenderCallback: (id) => {
+            document.querySelectorAll(`#${id} [class*="link:"]`).forEach(node => {
+                node.classList.forEach(className => {
+                    if (className.startsWith('link:')) {
+                        const url = className.split(':')[1];
+
+                        node.addEventListener('click', () => {
+                            window.open(`${url}`, '_self');
+                        });
+                    }
+                });
+            });
+        }
+    });
 </script>
