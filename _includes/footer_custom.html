@@ -33,7 +33,7 @@ mindmap
 </div>
 
 <script>
-    if (window.location.pathname === "/") {
+    if (window.location.pathname.replace(/[/]+$/, "") === "") {
         document.getElementById("expander").style.display = "none";
     } else {
         document.getElementById("mindmap").style.display = "none";
