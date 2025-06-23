@@ -51,6 +51,24 @@
                     }
                 });
             });
+            document.querySelectorAll(`#${id} [class*="link:"]`).forEach(node => {
+                node.addEventListener('mouseenter', () => {
+                    node.querySelectorAll('path,circle').forEach(path => {
+                        path.style.fill = '#15ff00';
+                    });
+                    node.querySelectorAll('tspan').forEach(path => {
+                        path.style.fill = 'blue';
+                    });
+                });
+                node.addEventListener('mouseleave', () => {
+                    node.querySelectorAll('path,circle').forEach(path => {
+                        path.style.fill = '';
+                    });
+                    node.querySelectorAll('tspan').forEach(path => {
+                        path.style.fill = '';
+                    });
+                });
+            });
         }
     });
 </script>
