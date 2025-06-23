@@ -30,9 +30,11 @@ mindmap
 
 <div id="expander">
     <h3>gimme that fun lil site map</h3>
+    <h4 id="debug">debug</h4>
 </div>
 
 <script>
+    document.getElementById("debug").textContent = `path = "${window.location.pathname}"`;
     if (window.location.pathname === "/") {
         document.getElementById("expander").style.display = "none";
     } else {
