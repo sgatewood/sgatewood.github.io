@@ -33,3 +33,43 @@ nav_order: 1
 ## [`direnv`](https://direnv.net/)
 
 - Set up dev environments for specific folders
+
+## [nixery.dev](https://nixery.dev/)
+
+Get a docker image with any nix package by appending slashes:
+
+```bash
+docker run -it --rm nixery.dev/shell/lolcat/sl/cowsay   
+```
+
+Way better than `alpine:latest` for `kubectl debug` images
+
+<div id="terminal-demo"></div>
+<script>
+  AsciinemaPlayer.create("/assets/casts/nixery.cast", document.getElementById("terminal-demo"), {
+    cols: 96,
+    rows: 20,
+    autoPlay: true,
+    loop: false,
+    preload: true,
+    theme: "asciinema"
+  });
+</script>
+
+## ^^ [asciinema](https://docs.asciinema.org/)
+
+Cool (and copyable) terminal recordings to embed in your website
+
+## [asciiquarium](https://robobunny.com/projects/asciiquarium/html/)
+
+<div id="terminal-demo2"></div>
+<script>
+  AsciinemaPlayer.create("/assets/casts/asciiquarium.cast", document.getElementById("terminal-demo2"), {
+    cols: 214,
+    rows: 45,
+    autoPlay: true,
+    loop: false,
+    preload: true,
+    theme: "asciinema"
+  });
+</script>
