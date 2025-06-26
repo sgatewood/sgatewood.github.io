@@ -59,3 +59,17 @@ Way better than `alpine:latest` for `kubectl debug` images
 ## ^^ [asciinema](https://docs.asciinema.org/)
 
 Cool (and copyable) terminal recordings to embed in your website
+
+## [asciiquarium](https://robobunny.com/projects/asciiquarium/html/)
+
+<div id="terminal-demo2"></div>
+<script>
+  AsciinemaPlayer.create("/assets/casts/asciiquarium.cast", document.getElementById("terminal-demo2"), {
+    cols: 214,
+    rows: 45,
+    autoPlay: true,
+    loop: false,
+    preload: true,
+    theme: "asciinema"
+  });
+</script>
