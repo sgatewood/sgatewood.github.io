@@ -50,7 +50,7 @@ Way better than `alpine:latest` for `kubectl debug` images
     cols: 96,
     rows: 20,
     autoPlay: true,
-    loop: false,
+    loop: true,
     preload: true,
     theme: "asciinema"
   });
@@ -68,7 +68,7 @@ Cool (and copyable) terminal recordings to embed in your website
     cols: 214,
     rows: 45,
     autoPlay: true,
-    loop: false,
+    loop: true,
     preload: true,
     theme: "asciinema"
   });
