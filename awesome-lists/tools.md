@@ -55,3 +55,7 @@ Way better than `alpine:latest` for `kubectl debug` images
     theme: "asciinema"
   });
 </script>
+
+## ^^ [asciinema](https://docs.asciinema.org/)
+
+Cool (and copyable) terminal recordings to embed in your website
